@@ -13,6 +13,7 @@
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
+    --color-light-blue: #41BBF2;
   
     /* Font size */
     --font-large: 48px;
@@ -28,7 +29,11 @@
 
     /* Size */
     --size-border-radius: 4px;
+
+    /* Animation */
+    --animation-duration: 300ms;
   }
+
 
   /* Universal tage */
   *{
@@ -49,9 +54,19 @@
   }
 
   ul{
-    list-style: none;
     /* padding 제거 */
     padding-left: 0;
+  }
+
+  li{
+      list-style: none;
+  }
+
+  button{
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      outline: none;
   }
 
   /* Typography */
@@ -90,7 +105,7 @@
       /* 중심축에서 정렬 */
       justify-content: space-between;
       /* 나만의 색상으로 변경할 것!!!!!!!!! */
-      background-color: var(--color-pink);
+      background-color: var(--color-light-blue);
       /* 수직 정렬 */
       align-items: center;
       color: var(--color-white);
@@ -118,7 +133,105 @@
       border: 1px solid var(--color-white);
   }
 
-/* 마우스가 해당 항목에 올라갔을 경우 반응  */
+  /* 마우스가 해당 항목에 올라갔을 경우 반응 */
   .navbar_menu_item:hover{
     background-color: var(--color-dark-pink);
+  }
+
+  /* Home */
+  #home{
+      background: url('imgs/home-background.png') center/cover no-repeat;
+      padding: 40px;
+      text-align: center;
+  }
+
+  /* 프로필 */
+  .home_avatar{
+      width: 250px;
+      height: 250px;
+      /* 사각형을 동그랗게 */
+      border-radius: 50%;
+      border: 2px solid var(--color-light-white);
+  }
+  
+  .home_title,
+  .home_description{
+      color: var(--color-white);
+  }
+
+  .home_contact{
+      color: var(--color-white);
+      font-size: var(--font-regular);
+      font-weight: var(--weight-bold);
+      margin: 24px;
+      padding: 8px 12px;
+      border: 2px solid var(--color-white);
+      border-radius: 4px;
+  }
+
+  /* Section common */
+  /* 공통적인 부분 설정 */
+  .section{
+      padding: 50px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+  }
+
+  /* About */
+  .about_majors{
+      display: flex;
+      justify-content: space-between;
+      margin: 80px 0;
+  }
+
+  .major_icon{
+      width: 170px;
+      height: 170px;
+      line-height: 170px;
+      font-size: 70px;
+      margin: auto;
+      color: var(--color-blue);
+      border: 1px solid var(--color-blue);
+      border-radius: 50%;
+      margin-bottom: 16px;
+  }
+
+  .major_icon i{
+      transition: var(--animation-duration);
+  }
+
+  .major_icon:hover i{
+      color: var(--color-light-blue);
+      transform: rotate(-30deg) scale(1.2);
+  }
+
+  .major_title, .major_description{
+      color: var(--color-dark-grey);
+  }
+
+  .major_description{
+      font-size: var(--font-small);
+  }
+
+  .job{
+      display: flex;
+      align-items: center;
+  }
+
+  .job_description{
+      margin: 0 16px;
+      text-align: left;
+  }
+
+  .job_name, .job_period{
+      color: var(--color-light-grey);
+  }
+
+  .job_name{
+      font-size: var(--font-small);
+  }
+
+  .job_period{
+      font-size: var(--font-micro);
   }
