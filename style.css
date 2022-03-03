@@ -391,3 +391,64 @@
       margin-left: -12px;
       margin-top: 8px;
   }
+
+  /* Testimonial */
+  #testimonials{
+      background-color: var(--color-light-white);
+  }
+  
+  .testimonials{
+      margin: 40px;
+  }
+
+  .testimonial{
+      display: flex;
+      margin: 32px 0;
+      /* 텍스트 작성 내용에 맞게 틀이 정렬되기 위함 */
+      align-items: center;
+      justify-content: center;
+  }
+
+  .testimonial_avatar{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+  }
+
+  .testimonial_avatar:nth-child(odd){
+      margin-right: 40px;
+  }
+
+  .testimonial_avatar:nth-child(even){
+      margin-left: 40px;
+  }
+
+  .testimonial_speech-bublle{
+      padding: 18px;
+      background-color: var(--color-white);
+      border-radius: var(--size-border-radius);
+  }
+
+  .testimonial_speech-bublle p{
+      color: var(--color-light-grey);
+  }
+
+  .testimonial_speech-bublle a{
+      color: var(--color-pink);
+  }
+
+
+  /* Contact */
+  #contact{
+      background-color: var(--color-light-blue);
+  }
+
+  .contact_title,
+  .contact_email,
+  .contact_rights{
+      color: var(--color-white);
+  }
+
+  .contact_title{
+      
+  }
