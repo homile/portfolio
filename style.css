@@ -404,9 +404,10 @@
   .testimonial{
       display: flex;
       margin: 32px 0;
-      /* 텍스트 작성 내용에 맞게 틀이 정렬되기 위함 */
-      align-items: center;
-      justify-content: center;
+      /* 텍스트 작성 내용에 맞게 틀이 정렬되기 위함 
+      section_container 안에 넣으니 해결됨*/
+      /* align-items: center;
+      justify-content: center; */
   }
 
   .testimonial_avatar{
