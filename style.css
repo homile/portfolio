@@ -100,16 +100,24 @@
 
   /* Navbar */
   #navbar{
+      position: fixed;
+      width: 100%;
       /* flex박스로 선정 */
       display: flex;    
       /* 중심축에서 정렬 */
       justify-content: space-between;
       /* 나만의 색상으로 변경할 것!!!!!!!!! */
-      background-color: var(--color-light-blue);
+      background-color: transparent;
       /* 수직 정렬 */
       align-items: center;
       color: var(--color-white);
       padding: 16px;
+      transition: var(--animation-duration) ease-in-out;
+  }
+
+  #navbar.navbar--dark{
+      background-color: var(--color-light-blue);
+      padding: 8px;
   }
 
   .navbar_menu{
@@ -152,6 +160,7 @@
   #home{
       background: url('imgs/home-background.png') center/cover no-repeat;
       padding: 40px;
+      padding-top: 120px;
       text-align: center;
   }
 
