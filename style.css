@@ -195,6 +195,7 @@
       padding: 50px;
       text-align: center;
       margin: auto;
+      scroll-margin: 20px;
   }
 
   .section_container{
