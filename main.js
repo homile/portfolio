@@ -67,25 +67,20 @@ workBtnContainer.addEventListener('click', (e) => {
    if (filter == null){
       return;
    }
-   console.log(filter);
-   projects.forEach((project) => {
-      console.log(project.dataset.type);
-      if(filter === '*' || filter === project.dataset.type){
-         project.classList.remove('invisible');
-      } else {
-         project.classList.add('invisible');
-      }
-   });
+   // console.log(filter);
+   projectContainer.classList.add('anim-out');
+   setTimeout(() => {
+      projects.forEach((project) => {
+         console.log(project.dataset.type);
+         if(filter === '*' || filter === project.dataset.type){
+            project.classList.remove('invisible');
+         } else {
+            project.classList.add('invisible');
+         }
+      });
+      projectContainer.classList.remove('anim-out');
+   }, 300);
 
-   // for(let project of projects) {
-   //    console.log(project);
-   // }
-
-   // let project;
-   // for(let i = 0; i < projects.length; i++){
-   //    project = projects[i];
-   //    console.log(project);
-   // }
 });
 
 // 스크롤링이 자주 쓰이므로 하나로 통합
