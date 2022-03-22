@@ -67,11 +67,20 @@ workBtnContainer.addEventListener('click', (e) => {
    if (filter == null){
       return;
    }
+
+   // Remove selection from the previous item and select the new one
+   // 버튼 클릭시 활성화 변경하기 위함
+   const active = document.querySelector('.category_btn.selected');
+   active.classList.remove('selected');
+   const target = e.target.nodeName === 'BUTTON' ? e.target: e.target.parentNode;
+   target.classList.add('selected');
+
+
    // console.log(filter);
    projectContainer.classList.add('anim-out');
    setTimeout(() => {
       projects.forEach((project) => {
-         console.log(project.dataset.type);
+         // console.log(project.dataset.type);
          if(filter === '*' || filter === project.dataset.type){
             project.classList.remove('invisible');
          } else {

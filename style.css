@@ -135,6 +135,7 @@
       margin: 0 4px;
       /* 클릭할 수 있는 항목이라는 것을 알려주기 위함 */
       cursor: pointer;
+      border: 1px solid transparent;
       border-radius: var(--size-border-radius);
   }
 
@@ -144,6 +145,7 @@
 
   /* 마우스가 해당 항목에 올라갔을 경우 반응 */
   .navbar_menu_item:hover{
+    border-color: var(--color-white);
     background-color: var(--color-dark-pink);
   }
 
@@ -328,7 +330,7 @@
       padding: 8px 48px;
   }
 
-  .category_btn.active,
+  .category_btn.selected,
   .category_btn:hover{
       background-color: var(--color-pink);
       color: var(--color-white);
