@@ -146,7 +146,7 @@
   /* 마우스가 해당 항목에 올라갔을 경우 반응 */
   .navbar_menu_item:hover{
     border-color: var(--color-white);
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-blue);
   }
 
   .navbar_toggle-btn{
@@ -191,13 +191,17 @@
       border-radius: 4px;
   }
 
+  .home_contact:hover{
+     background-color: var(--color-blue);
+  }
+
   /* Section common */
   /* 공통적인 부분 설정 */
   .section{
       padding: 50px;
       text-align: center;
       margin: auto;
-      scroll-margin: 20px;
+      scroll-margin: 40px;
   }
 
   .section_container{
@@ -328,6 +332,7 @@
       border-radius: var(--size-border-radius);
       font-size: var(--font-regular);
       padding: 8px 48px;
+      position: relative;
   }
 
   .category_btn.selected,
@@ -349,9 +354,9 @@
       height: 24px;
       line-height: 24px;
       display: inline-block;
-      position: relative;
+      position: absolute;
       top: -20px;
-      left: 4px;
+      right: 16px;
       opacity: 0;
       transition: all var(--animation-duration) ease-in;
   }
@@ -502,8 +507,8 @@
   /* Scroll */
   .arrow-up{
      position: fixed;
-     bottom: 50px;
-     right: 50px;
+     bottom: 40px;
+     right: 40px;
      width: 50px;
      height: 50px;
      font-size: 30px;
@@ -522,8 +527,19 @@
 
   /* For below 768px screen width */
   @media screen and (max-width: 768px) {
+     :root{
+        /* Font size */
+      --font-large: 30px;
+      --font-medium: 18px;
+      --font-regular: 16px;
+      --font-small: 14px;
+      --font-micro: 12px;
+     }
       .navbar_toggle-btn{
           display: block;
+          top:18px;
+          right: 18px;
+          font-size: var(--font-medium);
       }
 
       #navbar{
@@ -546,24 +562,59 @@
          display: block;
       }
 
+      .section{
+         padding: 16px;
+      }
+
       .about_majors{
           flex-direction: column;
+          margin-top: 30px;
+          margin-bottom: 0px;
       }
 
       .major{
-          margin-bottom: 38px;
+          margin-bottom: 30px;
       }
 
       .skillset{
           flex-direction: column;
       }
 
+      .category_btn{
+         margin: 4px 0;
+         width: 80%;
+      }
+
       .project{
           flex-grow: 1;
+      }
+
+      .testimonial{
+         flex-direction: column;
+         align-items: center;
       }
 
       .testimonial_avatar{
           width: 80px;
           height: 80px;
+      }
+
+      .testimonial_avatar:nth-child(even),
+      .testimonial_avatar:nth-child(odd){
+         margin: 0;
+         margin-bottom: 8px;
+      }
+
+      .testimonial_speech-bublle{
+         order: 1;
+      }
+
+      .arrow-up{
+         width: 40px;
+         height: 40px;
+         font-size: 25px;
+         line-height: 40px;
+         right: 16px;
+         bottom: 16px;
       }
   }
