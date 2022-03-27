@@ -212,7 +212,7 @@
   /* About */
   .about_majors{
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       margin: 80px 0;
   }
 
@@ -237,6 +237,10 @@
       transform: rotate(-30deg) scale(1.2);
   }
 
+  .major_title{
+     font-size: var(--font-medium);
+  }
+
   .major_title, .major_description{
       color: var(--color-dark-grey);
   }
@@ -247,6 +251,7 @@
 
   .job{
       display: flex;
+      justify-content: center;
       align-items: center;
   }
 
